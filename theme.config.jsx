@@ -8,24 +8,34 @@ export default {
   project: {
     link: 'https://github.com/limxdynamics',
   },
-   navbar: {
+  navbar: {
     extraContent: (
-      <a 
-        href="https://www.limxdynamics.com/en/tron1" 
-        target="_blank" 
-        rel="noreferrer"
-        style={{ 
-          display: 'flex', 
-          alignItems: 'center', 
-          padding: '0 5px' 
-        }}
-      >
-        <img 
-          src="/logo.png" 
-          alt="LimX" 
-          style={{ width: '70px', height: '25px', borderRadius: '4px' }} 
-        />
-      </a>
+      <>
+        <a 
+          href="https://www.limxdynamics.com/en/tron1" 
+          target="_blank" 
+          rel="noreferrer"
+          style={{ 
+            display: 'flex', 
+            alignItems: 'center', 
+            padding: '0 5px' 
+          }}
+        >
+          <img 
+            src="/logo.png" 
+            alt="LimX" 
+            className="nav-logo" 
+            style={{ width: '70px', height: '25px', borderRadius: '4px' }} 
+          />
+        </a>
+
+        {/* ส่วนที่เพิ่ม: สั่งกลับสีโลโก้เมื่อเป็น Light Mode */}
+        <style jsx global>{`
+          html:not(.dark) .nav-logo {
+            filter: invert(1);
+          }
+        `}</style>
+      </>
     )
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
