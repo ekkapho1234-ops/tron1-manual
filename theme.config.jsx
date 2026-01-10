@@ -32,4 +32,9 @@ export default {
   footer: {
     text: 'TRON 1 Documentation ',
   },
+
+  nextThemes: {
+    defaultTheme: 'dark', // บังคับให้เป็นสีดำตั้งแต่เริ่ม
+    storageKey: 'theme',  // จำค่าไว้ (ถ้าผู้ใช้เปลี่ยนกลับ)
+  },
 }

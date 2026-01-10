@@ -1,13 +1,12 @@
-{/* ปุ่มที่ 2: สำหรับไฟล์ Localization */}
-<div style={{ marginBottom: '20px' }}>
+<div style={{ marginBottom: '5px', marginTop: '20px' }}>
   <a href="/configs/localization_rviz.rviz" download="localization_rviz.rviz" style={{
     display: 'inline-flex',
     alignItems: 'center',
-    gap: '10px',
-    backgroundColor: '#0070f3',
-    border: '1px solid #0056b3',
+    gap: '20px',
+    backgroundColor: '#3f3f41',
+    border: '2px solid #444',
     color: '#fff',
-    padding: '12px 20px',
+    padding: '0px 20px',
     borderRadius: '8px',
     textDecoration: 'none',
     fontWeight: 'bold'
@@ -17,9 +16,15 @@
       <polyline points="7 10 12 15 17 10"></polyline>
       <line x1="12" y1="15" x2="12" y2="3"></line>
     </svg>
-    ดาวน์โหลด Config Localization (.rviz)
+    ดาวน์โหลด limx_mapping_rviz 
   </a>
   <div style={{ fontSize: '14px', color: '#888', marginTop: '5px' }}>
-    ใช้สำหรับตอนเดินนำทาง (Navigation Mode)
+    ใช้สำหรับตอนเดินนำทาง ( Navigation Mode)
   </div>
+</div>
+
+
+{/* เปลี่ยน <p> เป็น <div> เพื่อแก้ Error Hydration failed */}
+<div style={{ fontSize: '14px', color: '#888', marginTop: '5px', marginBottom: '30px' }}>
+  วิธีใช้: ดาวน์โหลดไฟล์นี้แล้วเปิดใน RViz ผ่านเมนู File &gt; Open Config
 </div>
