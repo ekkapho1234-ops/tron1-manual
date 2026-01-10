@@ -1,0 +1,37 @@
+# การติดตั้ง Environment และ Tools
+
+>แนะนำให้รันคำสั่งทีละชุดเพื่อป้องกัน Error
+
+### 1. ติดตั้ง ROS Noetic พื้นฐาน
+>รันคำสั่งเพื่อติดตั้ง Package ที่จำเป็น:
+
+```bash filename="Bash"
+sudo apt update
+sudo apt install ros-noetic-map-server ros-noetic-octomap-ros \
+ros-noetic-move-base ros-noetic-pointcloud-to-laserscan \
+python3.8 libeigen3-dev cmake build-essential
+```
+
+### 2. ติดตั้ง 3rd Party Tools
+>สร้างโฟลเดอร์ tools และติดตั้ง Livox SDK:
+
+```bash filename="Bash"
+cd && mkdir tools && cd tools
+git clone [https://github.com/Livox-SDK/Livox-SDK](https://github.com/Livox-SDK/Livox-SDK)
+cd Livox-SDK/build
+cmake .. && make
+sudo make install
+```
+
+### 3. ติดตั้ง GTSAM
+>สำคัญ: ต้องกำหนด Flag MARCH_NATIVE=OFF:
+
+
+```bash filename="Bash"
+cd ../
+wget -O gtsam.zip [https://github.com/borglab/gtsam/archive/refs/tags/4.1.1.zip](https://github.com/borglab/gtsam/archive/refs/tags/4.1.1.zip)
+unzip gtsam.zip
+cd gtsam-4.1.1/ && mkdir build && cd build
+cmake -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF -DGTSAM_USE_SYSTEM_EIGEN=ON ..
+sudo make install -j6
+```
