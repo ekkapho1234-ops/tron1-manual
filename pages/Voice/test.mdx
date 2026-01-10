@@ -1,0 +1,97 @@
+---
+title: Metra — ตัวหนังสือสวยแปลกตา
+---
+
+{/* เรียกใช้ Font */}
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&family=Sarabun:wght@400;700&display=swap" rel="stylesheet" />
+
+<style>{`
+  :root {
+      --bg: #0f172a;
+      --card: rgba(255, 255, 255, 0.03);
+      --muted: #9fb2d6;
+  }
+  .demo-container {
+      font-family: 'Sarabun', 'Poppins', sans-serif;
+      background: var(--bg);
+      color: #e6eef8;
+      padding: 2rem;
+      border-radius: 12px;
+  }
+  .grid {
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+  .card {
+      background: linear-gradient(180deg, var(--card), transparent);
+      padding: 1rem;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(2, 6, 23, 0.6);
+      min-height: 92px;
+  }
+  .sample {
+      margin: 0;
+      font-weight: 700;
+      line-height: 1.05;
+      font-size: 1.35rem;
+  }
+  .gradient {
+      background: linear-gradient(90deg, #ff7a18, #af002d, #320575);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+  }
+  .neon {
+      color: #9ff;
+      text-shadow: 0 0 6px rgba(159, 255, 255, 0.12), 0 10px 30px rgba(0, 90, 120, 0.35), 0 0 20px rgba(160, 30, 200, 0.12);
+  }
+  .carved {
+      color: #e6eef8;
+      text-shadow: 0 1px 0 #fff, 0 -6px 12px rgba(0, 0, 0, 0.5);
+      letter-spacing: .4px;
+  }
+  .outline {
+      color: transparent;
+      -webkit-text-stroke: 1px #9fb2d6;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, 0.45);
+  }
+  .hand {
+      font-family: 'Poppins', 'Sarabun', sans-serif;
+      font-weight: 300;
+      font-style: italic;
+      color: #ffd7a8;
+      transform: skewX(-6deg);
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.45);
+  }
+  .meta {
+      margin-top: .5rem;
+      font-size: 12px;
+      color: var(--muted);
+  }
+`}</style>
+
+<div className="demo-container">
+  <div className="grid">
+    <div className="card">
+      <h1 className="sample gradient">ตัวหนังสือ Gradient</h1>
+      <div className="meta">Gradient Style</div>
+    </div>
+    <div className="card">
+      <h2 className="sample neon">ตัวหนังสือ Neon</h2>
+      <div className="meta">Neon Style</div>
+    </div>
+    <div className="card">
+      <h2 className="sample carved">ตัวหนังสือ Carved</h2>
+      <div className="meta">Carved Style</div>
+    </div>
+    <div className="card">
+      <h2 className="sample outline">ตัวหนังสือ Outline</h2>
+      <div className="meta">Outline Style</div>
+    </div>
+    <div className="card">
+      <h2 className="sample hand">ตัวหนังสือ Handwritten</h2>
+      <div className="meta">Handwritten Style</div>
+    </div>
+  </div>
+</div>
