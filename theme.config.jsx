@@ -2,7 +2,7 @@ export default {
   logo: (
     <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
       <img src="/gic.png" alt="TRON 1 Logo" style={{ width: '50px', height: '30px' }} />
-      <span style={{ fontWeight: 470 }}>TRON1 Manual</span>
+      <span style={{ fontWeight: 470 }}>TRON1</span>
     </div>
   ),
   project: {
