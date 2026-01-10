@@ -109,3 +109,36 @@ rviz
     <div style={{ fontSize: '16px', color: '#eae6e6', marginTop: '5px', marginBottom: '30px' }}>
     <span style={{ marginRight: '150px' }}></span> จะได้ไฟล์ limx_map.pgm และ limx_map.yaml
     </div>
+
+    ### 4. Map timming
+      สำหรับระบบ Linux จำเป็นต้องดาวน์โหลดซอฟต์แวร์แก้ไขภาพ gmp ล่วงหน้า และขั้นตอนการติดตั้งในเครื่องมีดังนี้
+    > หมายเหตุ : หากมีซอฟต์แวร์นี้อยู๋แล้วให้ข้ามขั้นตอนนี้ไปได้เลย
+
+    คำสั่งเพื่อดาวน์โหลดซอฟต์แวร์ผ่าน Terminal บนคอมพิวเตอร์ของคุณ
+
+    ```bash filename="bash"
+    sudo apt install -y gimp language-pack-gnome-zh-hant language-pack-gnome-zh-hans
+    ```
+    4.1 ถ่ายโอนไฟล์ limx.pgm ที่สร้างขึ้นจากบอร์ดพัฒนาไปยังคอมพิวเตอร์ของผู้ใช้ 
+    > เปิด Terminal (โดยไม่ต้อง SSH ) หลังจากนั้นใช้คำสั่งด้านล่างนี้
+
+    ```bash filename="bash"
+    scp guest@10.192.1.3:/home/guest/limx_map.pgm ~/ 
+    #guest is the username of the development board
+    # 10.192.1.3 is the IP address of the development board.  
+    #/home/guest/limx_map.pgm is the save path of the PGM map in the development board
+    # ~/ is the save path of the PGM map on the user's computer.    
+    ```
+
+    > จากนั้นเข้า SSH ไปยัง guest@10.192.1.3 เพื่อถ่ายโอนข้อมูลให้ตัว TRON1
+    ```bash filename="bash"
+    ssh guest@10.192.1.3    #//password：123456
+    scp -r limx_map.pgm guest@10.192.1.2:~/ 
+    ```
+
+    > หลังจากทำการแก้ไขไฟล์ .gmp บนคอมพิวเตอร์ของคุณเสร็จแล้วทำการถ่ายโอนข้อมูลกลับไปยัง guest@10.192.1.3
+    ```bash filename="bash"
+    scp -r limx_map.pgm guest@10.192.1.3:~/  #This command is executed on the local terminal of the user's computer
+    ```
+    การแปลง 3D PCD เป็น 2D Grid Map เสร็จสิ้น
+

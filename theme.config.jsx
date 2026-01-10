@@ -40,7 +40,15 @@ export default {
   },
   docsRepositoryBase: 'https://github.com/shuding/nextra/blob/master',
   footer: {
-    text: 'TRON 1 Documentation ',
+    text: (
+      <div style={{ textAlign: 'center', fontSize: '16px' }}>
+        <strong>TRON 1 Documentation</strong>
+        <br />
+        <span style={{ fontSize: '12px', color: '#888', display: 'block', marginTop: '10px' }}>
+          "This website is for educational purposes only. Not affiliated with LimX Dynamics."
+        </span>
+      </div>
+    ),
   },
 
   nextThemes: {
