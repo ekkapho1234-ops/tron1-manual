@@ -1,3 +1,11 @@
 {
-  "index": "บทนำ (Introduction)"
+  "index": "บทนำ (Introduction)",
+
+  "About": {
+    "title": "About",
+    "type": "page"
+  },
+
+  "LiDAR": "LiDAR",
+  "Voice": "Voice"  
 }
