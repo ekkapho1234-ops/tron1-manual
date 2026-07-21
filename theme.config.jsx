@@ -12,7 +12,7 @@ export default {
     extraContent: (
       <>
         <a 
-          href="https://www.limxdynamics.com/en/tron1" 
+          href="https://www.limxdynamics.com/en/products/tron1" 
           target="_blank" 
           rel="noreferrer"
           style={{ 
